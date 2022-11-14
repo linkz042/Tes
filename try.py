@@ -117,7 +117,7 @@ except:pass
 	#if se in redmi:pass
 	#else:redmi.append(se)
 
-for x in range(4000):
+for x in range(1000):
 	rr = random.randint
 	rc = random.choice
 	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -126,13 +126,13 @@ for x in range(4000):
 	#B = f' MI 4LTE Build/{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}63{str(rc(aZ))}; ) AppleWebKit/537.36 (KHTML, like Gecko) UCBrowser/'
 	#C = f'10.9.2.{str(rr(111,999))} U3/0.8.0 Mobile Safari/534.30'
 #	A__ = f'Mozilla/5.0 (Linux; U; Android {str(rr(1,10))}.{str(rr(1,10))}.{str(rr(1,10))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
-	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(2,18))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
+	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(7,12))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
 #	A_ = f'Mozilla/5.0 (Linux; U; Android 12; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
 	B_ = f'{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}'
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
 	C_ = f'{str(rr(30,57))} Build/{B_}) AppleWebKit/537.36 (KHTML, like Gecko)'
-	D_ = f' Version/4.0 Chrome/{str(rr(10,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
-	E_ = f'537.36 HeyTapBrowser/{str(rr(2,40))}.7.36.1'
+	D_ = f' Version/4.0 Chrome/{str(rr(40,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
+	E_ = f'537.36 HeyTapBrowser/{str(rr(10,40))}.7.36.1'
 
 	se = f'{A_}{C_}{D_}{E_}'
 	if se in redmi:pass
