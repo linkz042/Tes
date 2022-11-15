@@ -117,7 +117,7 @@ except:pass
 	#if se in redmi:pass
 	#else:redmi.append(se)
 
-for x in range(2000):
+for x in range(5000):
 	rr = random.randint
 	rc = random.choice
 	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
