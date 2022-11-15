@@ -129,7 +129,7 @@ for x in range(2000):
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
 	C_ = f'{str(rr(30,57))} Build/{B_}) AppleWebKit/537.36 (KHTML, like Gecko)'
 	D_ = f' Version/4.0 Chrome/{str(rr(10,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
-	E_ = f'537.36 HeyTapBrowser/{str(rr(2,40))}.7.36.1'
+	E_ = f'537.36 UCBrowser/{str(rr(2,40))}.7.36.1 U3/0.8.0 mobile safari/533.1 BlackBerry6285/3.3.0.385 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/300'
 
 	se = f'{A_}{C_}{D_}{E_}'
 	if se in redmi:pass
