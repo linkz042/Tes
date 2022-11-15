@@ -117,7 +117,7 @@ except:pass
 	#if se in redmi:pass
 	#else:redmi.append(se)
 
-for x in range(5000):
+for x in range(2000):
 	rr = random.randint
 	rc = random.choice
 	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -128,8 +128,8 @@ for x in range(5000):
 	B_ = f'{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}'
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
 	C_ = f'{str(rr(30,57))} Build/{B_}) AppleWebKit/537.36 (KHTML, like Gecko)'
-	D_ = f' Version/4.0 Chrome/{str(rr(2,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
-	E_ = f'537.36 HeyTapBrowser/{str(rr(2,40))}.7.36.1'
+	D_ = f' Version/4.0 Chrome/{str(rr(20,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
+	E_ = f'537.36 HeyTapBrowser/{str(rr(10,40))}.7.36.1'
 
 	se = f'{A_}{C_}{D_}{E_}'
 	if se in redmi:pass
