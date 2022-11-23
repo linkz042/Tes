@@ -662,10 +662,10 @@ def crack(idf,pwx,url,awal):
 				'accept-encoding': 'gzip, deflate, br',
 				'accept-language': 'id,en-US;q=0.9,en;q=0.8',
 				'content-type': 'application/x-www-form-urlencoded',
-				'Host': url
+				'Host': url,
 				'origin': 'https://'+url,
 				'referer': 'https://'+url+'/login/?source=auth_switcher',
-				'user-agent': ua
+				'user-agent': ua,
 				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not) A Brand";v="99"',
 				'sec-ch-ua-mobile': '?0',
 				'sec-fetch-dest': 'empty',
