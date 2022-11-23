@@ -663,7 +663,7 @@ def crack(idf,pwx,url,awal):
 				'accept-language': 'id,en-US;q=0.9,en;q=0.8',
 				'content-type': 'application/x-www-form-urlencoded',
 				'Host': url
-				'origin': f"https://"+url,
+				'origin': f'https://'+url,
 				'referer': f'https://'+url+'/login/?source=auth_switcher',
 				'user-agent': ua
 				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not) A Brand";v="99"',
