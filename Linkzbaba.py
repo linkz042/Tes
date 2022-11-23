@@ -657,14 +657,14 @@ def crack(idf,pwx,url,awal):
 				"user-agent":ua,
 				"accept":"*/*",
 				"content-type":"application/x-www-form-urlencoded",
-				"origin":f"https://+url",
+				"origin":f"https://"+url,
 				"referer":f"https://'+url+'/login/?source=auth_switcher",
 				'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
 				"sec-ch-ua-mobile": "?0",
 				"sec-fetch-site":"same-origin",
 				"sec-fetch-mode":"cors",
 				"sec-fetch-dest":"empty",
-				"accept-encoding":"gzip, deflate br",
+				"accept-encoding":"gzip, deflate, br",
 				"accept-language":"id,en-US;q=0.9,en;q=0.8",
 				"x-requested-with":"XMLHttpRequest"
 			}
