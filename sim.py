@@ -400,7 +400,7 @@ class crack:
 					
 	#--- methode
 	def __crack__(self, user, peweh, url_log):
-		global ok,cp,loop,redmi 
+		global ok,cp,loop
 		komtol=random.choice([f"{M}",f"{K}",f"{H}",f"{N}",f"{U}",f"{P}"])
 		print (f"\r{komtol} • {P}{str(loop)}/{len(self.id)} - {H}OK:-{len(ok)} {K}CP:-{len(cp)}   ",end="")
 		for pw in peweh:
